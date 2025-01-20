@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Video to PDF</title>
+    <title>YouTube Video to PDF Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Download Video as PDF</h1>
 
-    <form method="POST">
-        <label for="url">Enter YouTube URL:</label>
-        <input type="text" id="url" name="url" required>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+        <h1>YouTube Video to PDF Converter</h1>
+        
+        <!-- Display success or error message -->
+        {% if message %}
+            <div class="message">
+                <p>{{ message }}</p>
+            </div>
+        {% endif %}
 
-    {% if message %}
-        <p>{{ message }}</p>
-    {% endif %}
+        <!-- Form to input YouTube URL -->
+        <div class="form-container">
+            <form action="/" method="POST">
+                <label for="url">Enter YouTube Video URL:</label>
+                <input type="text" id="url" name="url" placeholder="Paste YouTube video URL here" required>
+                <button type="submit">Convert to PDF</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

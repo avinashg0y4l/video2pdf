@@ -1,0 +1,16 @@
+[build]
+  # Build command for the Netlify site
+  command = "pip install -r requirements.txt && python -m functions.app"
+
+  # The folder containing the generated static files from your app
+  publish = "functions/"
+
+[functions]
+  # The path to your Python functions
+  directory = "functions"
+
+[[redirects]]
+  # Redirect the root route to the correct Flask app (for the Netlify serverless function)
+  from = "/"
+  to = "/.netlify/functions/app"
+  status = 200

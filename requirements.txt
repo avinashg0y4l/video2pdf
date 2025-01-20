@@ -5,3 +5,16 @@ scikit-image==0.18.3
 fpdf==1.7.2
 Pillow==8.4.0
 youtube-transcript-api==0.4.4
+requests==2.25.1
+Flask==2.0.1
+yt-dlp==2021.12.1
+fpdf==1.7.2
+Pillow==8.3.2
+opencv-python==4.5.3.56
+scikit-image==0.18.3
+Flask==2.2.2
+yt-dlp==2024.01.14
+Pillow==9.0.1
+opencv-python-headless==4.6.0.66
+scikit-image==0.19.3
+fpdf==1.7.2
